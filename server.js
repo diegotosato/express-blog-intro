@@ -9,50 +9,11 @@ const app = express()
 const PORT = 3000
 
 
+
 //vado a dire che la cartella public deve essere un asset statico
 app.use(express.static('public'));
 
 
-
-
-//array per i post del blog
-const posts = [
-    {
-        id: 1,
-        title: '',
-        content: '',
-        image: '',
-        tags: ['']
-    },
-    {
-        id: 2,
-        title: '',
-        content: '',
-        image: '',
-        tags: ['']
-    },
-    {
-        id: 3,
-        title: '',
-        content: '',
-        image: '',
-        tags: ['']
-    },
-    {
-        id: 4,
-        title: '',
-        content: '',
-        image: '',
-        tags: ['']
-    },
-    {
-        id: 5,
-        title: '',
-        content: '',
-        image: '',
-        tags: ['']
-    }
-]
 
 
 
@@ -68,5 +29,45 @@ app.get('/', (req, res) => {
 
 //definisco la rotta bacheca
 app.get('/bacheca', (req, res) => {
+
+    //array per i post del blog
+    const posts = [
+        {
+            id: 1,
+            title: '',
+            content: '',
+            image: '/img/ciambellone.jpeg',
+            tags: ['']
+        },
+        {
+            id: 2,
+            title: '',
+            content: '',
+            image: '/img/cracker_barbabietola.jpeg',
+            tags: ['']
+        },
+        {
+            id: 3,
+            title: '',
+            content: '',
+            image: '/img/pane_fritto_dolce.jpeg',
+            tags: ['']
+        },
+        {
+            id: 4,
+            title: '',
+            content: '',
+            image: '/img/pasta_barbabietola.jpeg',
+            tags: ['']
+        },
+        {
+            id: 5,
+            title: '',
+            content: '',
+            image: '/img/torta_paesana.jpeg',
+            tags: ['']
+        }
+    ]
+
     res.json(posts)
 })

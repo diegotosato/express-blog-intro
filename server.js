@@ -15,5 +15,5 @@ app.listen(PORT, () => {
 
 //#5 definisco la prima rotta
 app.get('/', (req, res) => {
-    res.send('My Express blog intro')
+    res.send('Server del mio blog')
 })

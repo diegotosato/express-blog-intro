@@ -9,6 +9,10 @@ const app = express()
 const PORT = 3000
 
 
+//vado a dire che la cartella public deve essere un asset statico
+app.use(express.static('public'));
+
+
 
 
 //array per i post del blog
